@@ -1,0 +1,241 @@
+body { 
+    font-family: 'Calibre', 'System UI', sans-serif;
+    background-color: #111;
+    color: #fff;
+}
+
+/* ESPX Header */
+/* Styling the header of the website, mimicking ESPN's design with a red background and white text */
+.espx-header {
+    background-color: #CC0000; /* ESPN signature red */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+    position: relative;
+}
+
+/* Logo inside the header */
+.espx-logo {
+    height: auto;
+    width: 100px;
+    position: absolute;
+    left: 0px;
+}
+
+/* Responsive Design - Mobile View */
+@media (max-width: 768px) {
+    .nav-menu {
+        justify-content: center;
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+
+    .espx-logo {
+        height: 30px;
+        width: auto;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+
+    svg {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    #spider-chart {
+        padding: 20px 10px; /* Reduce padding for smaller screens */
+    }
+}
+
+/* Smooth scrolling behavior for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navigation menu */
+/* Styling the list of navigation items inside the header */
+.nav-menu {
+    list-style-type: none; /* Removes default list styling (no bullets) */
+    display: flex; /* Horizontal layout for nav items */
+    flex-wrap: wrap; /* Allows the nav items to wrap onto new lines if needed */
+    gap: 15px; /* Space between each navigation item */
+    justify-content: center; /* Centers the nav items horizontally */
+    margin: 0 auto; /* Ensure the nav menu itself is centered */
+    padding: 0; /* Removes default padding for a cleaner layout */
+}
+
+/* Styling the links inside the navigation menu */
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Hover effect for navigation links */
+.nav-menu li a:hover {
+    border-bottom: 2px solid white;
+    padding-bottom: 2px;
+}
+
+/* White underline for active page */
+.nav-menu a.active-page {
+    border-bottom: 2px solid white;
+}
+
+nav h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+main {
+    padding: 0px;
+}
+
+.header-container {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.nba-logo {
+    width: 75px;
+    height: auto;
+    padding: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+footer p {
+    margin: 0;
+    font-size: 12px;
+}
+
+/* Responsive SVG and Chart Container Styling */
+#spider-chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1c1c1e;
+    border-radius: 10px;
+    padding: 50px 15px; /* Adjusted padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px auto;
+    max-width: 100%; /* Ensure the chart container doesn't exceed the screen width */
+    height: auto; /* Allow the height to adjust automatically */
+}
+
+#search-bar {
+    padding: 10px;
+    width: 60%;
+    border: none;
+    border-radius: 5px;
+}
+
+#search-button {
+    padding: 10px 20px;
+    background-color: #b82b23;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #7f3333;
+}
+
+svg {
+    width: 100%; /* Ensures the SVG takes full width of the container */
+    height: auto; /* Maintain the aspect ratio of the SVG */
+    max-width: 600px; /* Limit the maximum width */
+    display: block; /* Make the SVG a block element */
+}
+
+.tooltip {
+    font-size: 14px;
+    color: black;
+    background-color: rgb(182, 179, 179);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    z-index: 10;
+}
+
+/* Ensure the container wraps and resizes with the screen */
+.chart-container {
+    padding: 5px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%; /* Make sure the container doesn't overflow */
+}
+
+.chart-container:hover {
+    transform: scale(0.95); /* Adjust scale for a smaller hover effect */
+    box-shadow: 0 8px 16px rgba(173, 216, 230, 0.8);
+}
+
+#scatter-visualization, #visualization {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#spider-chart:hover {
+    transform: scale(0.85);
+    box-shadow: 0 8px 16px rgba(174, 67, 67, 0.8);
+}
+
+#loading-spinner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(87, 87, 87, 0.67);
+    z-index: 9999;
+}
+
+#loading-spinner p {
+    margin-top: 10px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+    color: orange;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

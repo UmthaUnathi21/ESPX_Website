@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding for the document -->
+    <meta charset="UTF-8">
+    <!-- Viewport settings for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the webpage displayed in the browser tab -->
+    <title>ESPX Website</title>
+    
+    <!-- Description for SEO, summarizing the website's purpose -->
+    <meta name="description" content="Welcome to the ESPX Website, showcasing sports statistics and visualizations focused on the English Premier League & U.S Basketball Leagues. Explore data, visualizations, and the design process of our site.">
+    
+    <!-- Keywords for SEO, relevant to the website's content -->
+    <meta name="keywords" content="ESPX - sports statistics, visualizations, English Premier League, NBA, WNBA, NCAA, data analysis, web development">
+    
+    <!-- Author of the webpage -->
+    <meta name="author" content="Umtha-Unathi Mavuso">
+    
+    <!-- Link to the main stylesheets for styling the website -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/carousel.css">
+    <link rel="stylesheet" href="../css/light-darkbtn.css">
+    
+    <!-- D3.js library for data visualization -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    
+    <!-- Link to the main scripts, loaded after the HTML is parsed -->
+    <script src="../js/homepage.js" defer></script>
+    <script src="../js/epl-breaking-news.js" defer></script>
+    <script src="../js/light-darkbtn.js" defer></script>
+
+</head>
+<body>
+    <header class="espx-header">
+            <img src="../logos/espx-logo(2).png" alt="ESPX Logo" class="espx-logo" aria-label="ESPX Logo">
+            <nav>
+                <ul class="nav-menu">
+                    <!-- Navigation links to different pages -->
+                    <li><a href="../index.html" class="nav-link" data-page="landing">Landing</a></li>
+                    <li><a href="../html/home.html" class="nav-link" data-page="home">Home</a></li>
+                    <li><a href="../html/essay.html" class="nav-link" data-page="Essay">Essay</a></li>
+                    <li><a href="../html/efl.html" class="nav-link" data-page="epl">EPL</a></li>
+                    <li><a href="../html/bballnews.html" class="nav-link" data-page="basketball">Basketball</a></li>
+                    <li><a href="../html/design.html" class="nav-link" data-page="design">Design</a></li>
+                    <li><a href="../html/predictor.html" class="nav-link" data-page="predictor">Predictor</a></li>
+                    <li><a href="../html/about.html" class="nav-link" data-page="about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Light/Dark Mode Toggle</h1>
+            <button id="modeToggle">Switch to Dark Mode</button>
+            </div>
+        <section class="welcome-section">
+            <a href="../index.html">
+                <img src="../logos/espx-logo(2).png" alt="ESPX Logo" class="espn-logo">
+            </a>
+            <!-- Main heading and introductory paragraph -->
+            <h1>Welcome to the ESPX Website</h1>
+            <p>This site is dedicated to showcasing sports statistics and visualizations. You can explore data on the English Premier League, NBA, WNBA, and NCAA basketball leagues. You can also view the design process of this site, and learn more about our passion for sports representation.</p>
+        </section>
+    </main>
+    
+        <!-- Highlights Reel Section -->
+<section class="highlights-section">
+    <h2>Sports Highlights</h2>
+         <!-- Clicking the container redirects to the bballnews.html & transfer.html pages -->
+         <div class="carousel" id="carousel-container">
+            <!-- Carousel items will be injected here by JavaScript -->
+        </div>
+</section>
+
+<!-- Breaking News Section -->
+<section class="breaking-news-section">
+    <h2>Breaking News</h2>
+    <div id="breaking-news">
+        <!-- Breaking news will be populated here -->
+        Loading breaking news...
+    </div>
+</section>
+
+        <!-- EPL Game Scores Ticker -->
+<section class="scores-ticker">
+    <h2>2022-23 EPL Match Scores</h2>
+    <div class="ticker">
+        <p id="ticker-text"></p>
+    </div>
+</section>
+    </main>
+    
+
+    <footer>
+        <!-- Footer with copyright information -->
+        <p>&copy; 2024 ESPX. All rights reserved. Authored by Umtha-Unathi Mavuso</p>
+    </footer>
+</body>
+</html>

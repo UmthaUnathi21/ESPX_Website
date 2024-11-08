@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StatMuse Clone</title>
+    <link rel="stylesheet" href="../css/bballstats.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- NCAA logo added above the title -->
+            <img src="../logos/nba-logo.png" alt="NBA Logo" class="nba-logo" id="nbalogin">
+            <h1>Player Database</h1>
+            <input type="text" id="search-bar" placeholder="Ask about any player" list="player-suggestions">
+            <datalist id="player-suggestions"></datalist>
+            <button id="search-button">Search</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="results">
+            <h2>Player Stats</h2>
+            <div id="loading-spinner" style="display: none;">
+                <!-- Simple CSS Spinner -->
+                <div class="spinner"></div>
+                <p>Loading player data...</p>
+            </div>
+            <div id="nba-player-info">
+                <!-- Player information will be dynamically loaded here -->
+            </div>
+            <div id="nba-player-stats">
+                <!-- Player stats will be displayed here -->
+            </div>
+        </section>
+
+        <section id="visualization">
+            <h2>Performance Visualization</h2>
+            <!-- D3.js visualizations will be rendered here -->
+        </section>
+    </main>
+
+    <!-- Back to Top button outside the footer -->
+    <button id="back-to-top" class="back-to-top-btn">Back to Top</button>
+
+    <footer>
+        <p>&copy; 2024 ESPX. All rights reserved. Authored by Umtha-Unathi Mavuso</p>
+    </footer>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="../js/bballstats-nba.js"></script>
+</body>
+</html>

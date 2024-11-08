@@ -1,0 +1,293 @@
+body {
+    font-family: 'Calibre', 'System UI', sans-serif;
+    background-color: #111;
+    color: #fff;
+}
+
+/* ESPX Header */
+/* Styling the header of the website, mimicking ESPN's design with a red background and white text */
+.espx-header {
+    background-color: #CC0000; /* ESPN signature red */
+    color: white; /* White text for contrast */
+    display: flex; /* Flexbox layout for header content */
+    align-items: center; /* Vertically center items within the header */
+    justify-content: center; /* Center the entire header content */
+    padding: 10px 20px;
+    position: relative;
+}
+
+/* Logo inside the header */
+.espx-logo {
+    height: auto; /* Adjust the height as needed */
+    width: 100px;
+    position: absolute; /* Position absolute to keep the logo on the left */
+    left: 0px; /* Align logo to the left */
+}
+
+/* Responsive Design - Mobile View */
+/* Adjusts layout for screens smaller than 768px */
+@media (max-width: 768px) {
+    .nav-menu {
+        justify-content: center;
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+
+    .espx-logo {
+        height: 30px; /* Smaller logo for mobile screens */
+        width: auto;
+    }
+
+    footer {
+        font-size: 12px; /* Reduces footer text size for mobile */
+    }
+
+    svg {
+        width: 100%; /* Ensures SVG (charts) are responsive */
+        height: auto; /* Adjusts height automatically */
+    }
+}
+
+.header-container {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+/* Navigation menu */
+/* Styling the list of navigation items inside the header */
+.nav-menu {
+    list-style-type: none; /* Removes default list styling (no bullets) */
+    display: flex; /* Horizontal layout for nav items */
+    gap: 15px; /* Space between each navigation item */
+    justify-content: center; /* Centers the nav items horizontally */
+    margin: 0 auto; /* Ensure the nav menu itself is centered */
+}
+
+/* Styling the links inside the navigation menu */
+.nav-menu li a {
+    color: white; /* White text for nav links */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 14px; /* Slightly smaller text for a clean look */
+}
+
+/* Hover effect for navigation links */
+.nav-menu li a:hover {
+    border-bottom: 2px solid white; /* Adds a bottom border when hovered */
+    padding-bottom: 2px; /* Ensures the text doesn't shift when the border appears */
+}
+
+/* White underline for active page */
+.nav-menu a.active-page {
+    border-bottom: 2px solid white;
+}
+
+nav h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* Smooth scrolling behavior for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+#search-bar {
+    padding: 10px;
+    width: 60%;
+    border: none;
+    border-radius: 5px;
+}
+
+#search-button {
+    padding: 10px 20px;
+    background-color: #b82b23;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #7f3333;
+}
+
+main {
+    padding: 20px;
+}
+
+#results {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center children horizontally */
+    gap: 20px;
+}
+
+#player-info, #player-stats, #visualization, #scatter-visualization{
+    display: block; /* Use flexbox for centering */
+    flex-direction: column; /* Stack visualizations vertically */
+    align-items: center; /* Center children horizontally */
+    background-color: #1c1c1e;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1;
+    margin: 10px;
+}
+
+/* Footer */
+/* Styling the footer at the bottom of the page */
+/* Footer */
+footer {
+    background-color: #333; 
+    color: white; 
+    text-align: center; 
+    padding: 10px; 
+    position: relative; /* Change to relative */
+    z-index: 1; /* Keep footer behind other elements */
+}
+
+/* Footer text styling */
+footer p {
+    margin: 0; /* Removes default margin */
+    font-size: 12px; /* Smaller font size for a clean look */
+}
+
+#loading-spinner {
+    position: fixed; /* Position fixed so it stays in place */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background-color: rgba(87, 87, 87, 0.67); /* Optional: semi-transparent background */
+    z-index: 9999; /* Make sure it’s on top of other elements */
+    padding-top: 300px;
+    text-align: center;
+}
+
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.spinner {
+    margin: 0 auto; /* Center the spinner */
+}
+
+#results {
+    display: block;
+    flex-direction: column; /* Arrange items in a column */
+    align-items: center; /* Center items horizontally */
+}
+
+#results h2 {
+    text-align: center; /* Center the header text */
+    margin-bottom: 20px; /* Space below the header */
+}
+
+/* Style for NCAA logo */
+.logo-container {
+    text-align: center;  /* Centers the logo horizontally */
+    margin-bottom: 20px; /* Adds space below the logo */
+}
+
+.ncaa-logo, .nba-logo {
+    width: 75px;  /* Adjust the width of the logo */
+    height: auto;  /* Automatically adjusts height based on width */
+    padding: 20px;
+}
+
+.back-to-top-btn {
+    position: relative; /* Keep it relative as the user scrolls */
+    bottom: 15px; /* Position it above the footer */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Ensure centering works properly */
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333333;
+    color: rgb(184, 181, 181); /* Changed to black for better contrast */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    
+}
+
+.back-to-top-btn:hover {
+    background-color: #707071;
+}
+
+.tooltip {
+    font-size: 14px;
+    color: black;
+    background-color: rgb(182, 179, 179);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    position: absolute;
+    opacity: 0; /* Start hidden */
+    pointer-events: none; /* Avoid interfering with pointer events */
+    transition: opacity 0.2s;
+}
+
+/* Style for containers */
+.container {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Default shadow */
+}
+
+/* Hover effect for containers */
+.container:hover {
+    transform: scale(1.05); /* Slightly expand the container */
+    box-shadow: 0 8px 16px rgba(173, 216, 230, 0.8); /* Blue glow effect */
+}
+
+/* Add the same effects to SVG elements if needed */
+#scatter-visualization, #visualization {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px; /* Optional max width */
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1c1c1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#scatter-visualization:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(174, 67, 67, 0.8);
+}
+
+#visualization:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(174, 67, 67, 0.8);
+}
+
+#player-info:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(174, 67, 67, 0.8);
+}
+
+#player-stats:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(174, 67, 67, 0.8);
+}

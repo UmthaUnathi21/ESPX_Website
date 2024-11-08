@@ -1,0 +1,250 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #d8d6d6;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* Main */
+main {
+    flex: 1;
+    width: 100%;
+    padding: 20px;
+    overflow: auto;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background-color: #CC0000;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ESPX Header */
+.espx-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ESPX Logo */
+.espx-logo {
+    height: auto;
+    width: 100px;
+    margin-right: 20px;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 5px 10px;
+    transition: border-bottom 0.3s;
+}
+
+.nav-menu li a:hover {
+    border-bottom: 2px solid white;
+    padding-bottom: 3px;
+}
+
+/* Team Select Dropdown */
+#team-select {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+#team-select label {
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+#team-select select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Chart Container */
+.chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+/* Chart Area */
+#chart-area {
+    width: 100%;
+    height: auto;
+}
+
+/* Bar Styling for Teams */
+.bar-team1 {
+    fill: steelblue;
+}
+
+.bar-team2 {
+    fill: orange;
+}
+
+/* Stat Labels */
+.stat-label {
+    font-size: 1.2vw;
+    fill: #333;
+}
+
+/* Team Labels */
+.team-label {
+    font-weight: bolder;
+    font-size: 1.4vw;
+    fill: #333;
+}
+
+.team1-label {
+    fill: steelblue;
+}
+
+.team2-label {
+    fill: orange;
+}
+
+/* Numeric Values on Bars */
+.value-team1, .value-team2 {
+    font-weight: bold;
+    font-size: 1.1vw;
+    fill: #000;
+}
+
+/* Back-to-Top Button */
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#back-to-top:hover {
+    background-color: #555;
+    transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+    font-size: 12px;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 1200px) {
+    .stat-label, .team-label, .value-team1, .value-team2 {
+        font-size: 1.5vw;
+    }
+}
+
+@media (max-width: 992px) {
+    .stat-label, .team-label, .value-team1, .value-team2 {
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .espx-logo {
+        width: 80px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+    }
+
+    .nav-menu {
+        justify-content: center;
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+
+    #team-select {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #team-select label, #team-select select {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    .stat-label, .team-label, .value-team1, .value-team2 {
+        font-size: 3vw;
+    }
+}
+
+@media (max-width: 576px) {
+    .stat-label, .team-label, .value-team1, .value-team2 {
+        font-size: 4vw;
+    }
+
+    .chart-container {
+        padding: 5px;
+    }
+
+    #team-select label, #team-select select {
+        max-width: 100%;
+    }
+}

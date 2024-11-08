@@ -1,0 +1,63 @@
+/* Light Mode (Default) */
+body.light-mode {
+    background-color: #d8d6d6; /* Light gray background */
+    color: #333; /* Dark text */
+}
+
+.news-container, .news-item, .chart-container {
+    background-color: #d8d6d6; /* Light container background */
+    color: #333;
+}
+
+.news-container h3, .news-item h3, .scores-container h3 {
+    color: #333; /* Dark header in light mode */
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #333333; /* Dark page background */
+    color: #d8d6d6; /* Light text */
+}
+
+body.dark-mode .news-container,
+body.dark-mode .news-item {
+    background-color: #333333; /* Dark gray container background */
+    color: #d8d6d6; /* Light text inside container */
+}
+
+body.dark-mode .scores-container {
+    background-color: #333333; /* Dark gray container background */
+    color: #333; /* Light text inside container */
+}
+
+body.dark-mode .chart-container {
+    background-color: #333333; /* Dark gray container background */
+    color: #333; /* Light text inside container */
+}
+
+body.dark-mode .legend, body.dark-mode .chart-title, body.dark-mode .epl-chart, body.dark-mode .tooltip {
+    background-color: #333333; /* Dark gray container background */
+    color: #d8d6d6; /* Light text inside container */
+}
+
+body.dark-mode .news-container h3,
+body.dark-mode .news-item h3 {
+    color: #e0e0e0; /* Slightly off-white for headers in dark mode */
+}
+
+body.dark-mode .tooltip h3 {
+    color: #333333; /* Slightly off-white for headers in dark mode */
+}
+
+/* Button Styles */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    opacity: 0.8;
+}

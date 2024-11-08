@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESPX Player Database</title>
+    <link rel="stylesheet" href="../css/bballstats.css">
+    <link rel="stylesheet" href="../css/light-darkbtn.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="../js/bballstats.js"></script>
+    <script src="../js/design.js" defer></script>
+</head>
+<body>
+        <header class="espx-header">
+            <img src="../logos/espx-logo(2).png" alt="ESPX Logo" class="espx-logo" aria-label="ESPX Logo">
+            <ul class="nav-menu">
+                <li><a href="../html/home.html" class="nav-link" data-page="home">Home</a></li>
+                <li><a href="../html/bballnews.html" class="nav-link" data-page="basketball">Basketball</a></li>
+                <li><a href="../html/bballscores.html" class="nav-link" data-page="scores">Scores</a></li>
+                <li><a href="../html/nbastats.html" class="nav-link" data-page="stats">NBA Stats</a></li>
+                <li><a href="../html/bballstats.html" class="nav-link" data-page="stats">NCAAM Stats</a></li>
+                <li><a href="../html/bballnews.html" class="nav-link" data-page="basketball">News <i class="fas fa-basketball-ball"></i></a></li> <!-- Added basketball icon -->
+                <li><a href="../html/bballteams.html" class="nav-link" data-page="teams">Teams</a></li>
+                <li><a href="../html/design.html" class="nav-link" data-page="design">Design</a></li>
+                <li><a href="../html/essay.html" class="nav-link" data-page="Essay">Essay</a></li>
+                <li><a href="../html/about.html" class="nav-link" data-page="about">About</a></li>
+            </ul>
+        </header>
+
+    <main>
+        <section>
+            <!-- NCAA logo added above the title -->
+            <div class="header-container">
+                <img src="../logos/ncaamw-logo.png" alt="NCAA Logo" class="ncaa-logo" id="ncaalogin" aria-label="NCAA Logo">
+                <h1>NCAA Player Database</h1>
+                <input type="text" id="search-bar" placeholder="Ask about any player" list="player-suggestions">
+                <datalist id="player-suggestions"></datalist>
+                <button id="search-button">Search</button>
+            </div>
+        </section>
+        <section id="results">
+            <h2>Player Stats</h2>
+            <div id="loading-spinner" style="display: none;">
+                <!-- Simple CSS Spinner -->
+                <div class="spinner">
+                    <i class="fas fa-basketball-ball fa-spin" style="font-size: 50px; color: orange;"></i>
+                </div>
+                <p>Loading player data...</p>
+            </div>
+
+            <div class="container" id="player-info">
+                <!-- Player information will be dynamically loaded here -->
+            </div>
+            <div class="container" id="player-stats">
+                <!-- Player stats will be displayed here -->
+            </div>
+        </section>
+
+        <section class="container" id="visualization">
+            <h2>Performance Visualization</h2>
+            <!-- D3.js visualizations will be rendered here -->
+        </section>
+
+        <section class="container" id="scatter-visualization">
+            <h2>Scatter Plot Visualization</h2>
+            <!-- D3.js scatter plot will be rendered here -->
+        </section>
+    </main>
+
+    <!-- Back to Top button outside the footer -->
+    <button id="back-to-top" class="back-to-top-btn" style="display: none;">Back to Top</button>
+
+    <footer>
+        <p>&copy; 2024 ESPX. All rights reserved. Authored by Umtha-Unathi Mavuso</p>
+    </footer>
+</body>
+</html>

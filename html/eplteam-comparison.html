@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPL Team Comparison</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/eplteam-comparison.css">
+    <link rel="stylesheet" href="../css/light-darkbtn.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="../js/all.js" defer></script>
+    <script src="../js/eplteam-comparison.js" defer></script>
+    <script src="../js/light-darkbtn.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="espx-header">
+            <img src="../logos/espx-logo(2).png" alt="ESPX Logo" class="espx-logo" aria-label="ESPX Logo">
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../html/home.html" class="nav-link" data-page="home">Home</a></li>
+                    <li><a href="../html/efl.html" class="nav-link" data-page="epl">EPL</a></li>
+                    <li><a href="../html/scores.html" class="nav-link" data-page="scores">Scores</a></li>
+                    <li><a href="../html/design.html" class="nav-link" data-page="design">Design</a></li>
+                    <li><a href="../html/essay.html" class="nav-link" data-page="Essay">Essay</a></li>
+                    <li><a href="../html/predictor.html" class="nav-link" data-page="predictor">Predictor</a></li>
+                    <li><a href="../html/eplteams.html" class="nav-link" data-page="teams">Teams</a></li>
+                    <li><a href="../html/eplteam-comparison.html" class="nav-link" data-page="teams">Team Comparison</a></li>
+                    <li><a href="../html/transfer.html" class="nav-link" data-page="transfers">Transfers</a></li>
+                    <li><a href="../html/about.html" class="nav-link" data-page="about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Light and Dark Mode Toggle</h1>
+            <button id="modeToggle">Switch to Dark Mode</button>
+            </div>
+        <h1>EPL Team Stats Comparison</h1>
+        <div id="team-select">
+            <label for="team1">Select Team 1:</label>
+            <select id="team1"></select>
+            <label for="team2">Select Team 2:</label>
+            <select id="team2"></select>
+        </div>
+
+        <div class="chart-container">
+            <div id="chart-area"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ESPX. All rights reserved. Authored by Umtha-Unathi Mavuso</p>
+    </footer>
+</body>
+</html>
